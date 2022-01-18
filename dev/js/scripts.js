@@ -1,4 +1,4 @@
-import { scrollone, scrolltwo, scrollthree, scrollfour, scrollfive } from "./scrollAnimation.js"
+import { fadeInText, rotateRobot, barGrow, imageSlideRight, galleryGrow } from "./scrollAnimation.js"
 
 
 window.addEventListener('load', function(){
@@ -8,23 +8,18 @@ window.addEventListener('load', function(){
     let animationElements = ["#history-middle p", "#robot-profile", ".yellow-bar", "#hero-image", ".gallery"];
 
 
-    // for(let i = 0; i< triggerElements.length; i++){
-    //     scrollone(triggerElements[i], animationElements[i]);
-    //     scrolltwo(triggerElements[i], animationElements[i]);
-    // }
-
     for(let i = 0; i < triggerElements.length; i++){
 
-        if( i ===1 ){
-             scrolltwo(triggerElements[i], animationElements[i]);
-        }if( i ===2 ){
-            scrollthree(triggerElements[i], animationElements[i]);
-        }if( i ===3 ){
-            scrollfour(triggerElements[i], animationElements[i]);
-        }if( i ===4 ){
-            scrollfive(triggerElements[i], animationElements[i]);
-        }else{
-            scrollone(triggerElements[i], animationElements[i]);
+        if( i ===0 ){
+            fadeInText(triggerElements[i], animationElements[i]);
+        }else if( i ===1 ){
+            rotateRobot(triggerElements[i], animationElements[i]);
+        }else if( i ===2 ){
+            barGrow(triggerElements[i], animationElements[i]);
+        }else if( i ===3 ){
+            imageSlideRight(triggerElements[i], animationElements[i]);
+        }else if( i ===4 ){
+            galleryGrow(triggerElements[i], animationElements[i]);
         }
     }
     

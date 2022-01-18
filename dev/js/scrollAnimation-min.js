@@ -1,1 +1,0 @@
-import{gsap}from"gsap";import{ScrollTrigger}from"gsap/ScrollTrigger";function scrollone(){console.log("testing")}gsap.registerPlugin(ScrollTrigger);

@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.set(".yellow-bar", {transformOrigin:" left center"});
 
-export function scrollone(triggerElement, animationElement){
+export function fadeInText(triggerElement, animationElement){
     const tl = new gsap.timeline();
 
     tl.from(animationElement,{
@@ -20,13 +20,12 @@ export function scrollone(triggerElement, animationElement){
     });
 }
 
-export function scrolltwo(triggerElement, animationElement){
+export function rotateRobot(triggerElement, animationElement){
     const tl = new gsap.timeline();
 
     tl.from(animationElement,{
         duration:1,
         alpha: 0,
-        x:-500,
         rotation: 360,
         scrollTrigger: {
             trigger: triggerElement,
@@ -38,7 +37,7 @@ export function scrolltwo(triggerElement, animationElement){
     });
 }
 
-export function scrollthree(triggerElement, animationElement){
+export function barGrow(triggerElement, animationElement){
     const tl = new gsap.timeline();
 
     tl.from(animationElement,{
@@ -54,12 +53,12 @@ export function scrollthree(triggerElement, animationElement){
     });
 }
 
-export function scrollfour(triggerElement, animationElement){
+export function imageSlideRight(triggerElement, animationElement){
     const tl = new gsap.timeline();
 
     tl.from(animationElement,{
         duration:1,
-        x:500,
+        x:"+=500",
         alpha:0,
         scrollTrigger: {
             trigger: triggerElement,
@@ -70,7 +69,7 @@ export function scrollfour(triggerElement, animationElement){
     });
 }
 
-export function scrollfive(triggerElement, animationElement){
+export function galleryGrow(triggerElement, animationElement){
     const tl = new gsap.timeline();
 
     tl.from(animationElement,{

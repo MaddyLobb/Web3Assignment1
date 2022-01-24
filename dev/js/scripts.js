@@ -1,5 +1,41 @@
 import { fadeInText, rotateRobot, barGrow, imageSlideRight, galleryGrow } from "./scrollAnimation.js"
+import { burgerTL } from "./simplemenu";
+import {menuAnimation} from "./mobileMenu.js"
+import {scrollPage} from "./pageScroll"
+import { displayWindowSize } from "./mobileResizing"
 
+var burgerButton = document.querySelector("#burger");
+let canISeeMenu = false;
+
+function openCloseMenu(){
+    if(canISeeMenu === false){
+        // can't see menu... play timeline of burger into X
+        burgerTL.play();
+        menuAnimation.play();
+        canISeeMenu = true;
+    }else{
+        // can see menu.. play X back into burger
+        burgerTL.reverse();
+        menuAnimation.reverse();
+        canISeeMenu = false;
+    }
+}
+
+burgerButton.addEventListener("click", openCloseMenu);
+let navButtons = document.querySelectorAll(".nav-btns");
+
+for (const button of navButtons){
+    button.addEventListener("click", checkScrolling);
+    button.addEventListener("click", openCloseMenu);
+}
+
+function checkScrolling(e) {
+    // check to see which button was clicked
+    const indexValue = [].indexOf.call(navButtons, e.target)
+    if (indexValue != -1) {
+        scrollPage(indexValue);
+    }
+}
 
 window.addEventListener('load', function(){
 
@@ -24,3 +60,7 @@ window.addEventListener('load', function(){
     }
     
 });
+
+window.addEventListener("resize", displayWindowSize);
+
+window.addEventListener('load', displayWindowSize);

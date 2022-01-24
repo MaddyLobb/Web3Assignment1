@@ -14,8 +14,8 @@ export function fadeInText(triggerElement, animationElement){
         scrollTrigger: {
             trigger: triggerElement,
             toggleActions: "restart none resume none",
-            scrub: true,
-            markers: true
+            //markers: true,
+            scrub: true
         }
     });
 }
@@ -30,8 +30,9 @@ export function rotateRobot(triggerElement, animationElement){
         scrollTrigger: {
             trigger: triggerElement,
             toggleActions: "restart none resume none",
-            scrub: true,
-            markers: true
+            //markers: true,
+            scrub: true
+
         },
         stagger:.35
     });
@@ -46,8 +47,8 @@ export function barGrow(triggerElement, animationElement){
         scrollTrigger: {
             trigger: triggerElement,
             toggleActions: "restart none resume none",
-            scrub: true,
-            markers: true
+            //markers: true,
+            scrub: true
         },
         stagger:.35
     });
@@ -63,8 +64,8 @@ export function imageSlideRight(triggerElement, animationElement){
         scrollTrigger: {
             trigger: triggerElement,
             toggleActions: "restart none resume none",
-            scrub: true,
-            markers: true
+            //markers: true,
+            scrub: true
         }
     });
 }
@@ -79,8 +80,8 @@ export function galleryGrow(triggerElement, animationElement){
         scrollTrigger: {
             trigger: triggerElement,
             toggleActions: "restart none resume none",
-            scrub: true,
-            markers: true
+            //markers: true,
+            scrub: true
         }
     });
 }

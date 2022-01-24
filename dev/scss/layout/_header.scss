@@ -7,6 +7,8 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 5000;
+    z-index: 1000;
 
     >div {
         display: grid;
@@ -31,27 +33,35 @@ header {
             display: flex;
             grid-area: burger;
             padding: 10px;
-            scale: 50%;
+            position: relative;
+            
 
             @include lg {
                 display: none !important;
             }
 
-            i {
-                cursor: pointer;
-                font-size: rem-calc(30);
+            #burger{
+                position: absolute;
+                z-index: 1000;
+                height: 40px;
+                width: 40px;
             }
+
         }
 
         #nav-container {
             background-color: $charcoal;
-            display: none;
             grid-area: nav;
-            padding: 20px 10px 10px;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            z-index: 500;
 
             @include lg {
                 background-color: $white;
-                display: block !important;
+                position: static;
+                height: 100%;
+                width: 100%;
             }
         }
     }

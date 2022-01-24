@@ -476,6 +476,7 @@ header > div #burger-container {
   display: flex;
   grid-area: burger;
   padding: 10px;
+  scale: 50%;
 }
 @media (min-width: 1024px) {
   header > div #burger-container {

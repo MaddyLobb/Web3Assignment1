@@ -53,9 +53,10 @@ header {
             background-color: $yellow;
             grid-area: nav;
             position: fixed;
-            width: 50vw;
-            height: 30vh;
+            width: 40vw;
+            height: 100vh;
             z-index: 500;
+            right: 0;
 
             @include lg {
                 background-color: $white;

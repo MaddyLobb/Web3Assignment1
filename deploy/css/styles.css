@@ -406,7 +406,7 @@ textarea {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: center;
 }
 @media (min-width: 1024px) {
   #nav-container ul {
@@ -416,8 +416,8 @@ textarea {
   }
 }
 #nav-container ul li {
-  margin-bottom: 20px;
-  text-align: right;
+  margin-bottom: 30px;
+  text-align: center;
 }
 @media (min-width: 1024px) {
   #nav-container ul li {
@@ -501,9 +501,10 @@ header > div #nav-container {
   background-color: #F8C832;
   grid-area: nav;
   position: fixed;
-  width: 50vw;
-  height: 30vh;
+  width: 40vw;
+  height: 100vh;
   z-index: 500;
+  right: 0;
 }
 @media (min-width: 1024px) {
   header > div #nav-container {

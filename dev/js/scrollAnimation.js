@@ -59,7 +59,7 @@ export function imageSlideRight(triggerElement, animationElement){
 
     tl.from(animationElement,{
         duration:1,
-        x:"+=500",
+        x:"+=0",
         alpha:0,
         scrollTrigger: {
             trigger: triggerElement,

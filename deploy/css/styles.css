@@ -445,7 +445,7 @@ textarea {
   }
 }
 #nav-container ul li button:hover {
-  color: #F8C832;
+  color: #222222;
 }
 #nav-container ul li:last-child {
   border: none;
@@ -498,7 +498,7 @@ header > div #burger-container #burger {
   width: 40px;
 }
 header > div #nav-container {
-  background-color: #222222;
+  background-color: #F8C832;
   grid-area: nav;
   position: fixed;
   width: 50vw;

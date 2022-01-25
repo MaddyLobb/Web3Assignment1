@@ -1,5 +1,5 @@
 import { fadeInText, rotateRobot, barGrow, imageSlideRight, galleryGrow } from "./scrollAnimation.js"
-import { burgerTL } from "./simplemenu";
+import { navTL } from "./simplemenu";
 import {menuAnimation} from "./mobileMenu.js"
 import {scrollPage} from "./pageScroll"
 import { displayWindowSize } from "./mobileResizing"
@@ -9,20 +9,23 @@ let canISeeMenu = false;
 
 function openCloseMenu(){
     if(canISeeMenu === false){
-        // can't see menu... play timeline of burger into X
-        burgerTL.play();
+        navTL.play();
         menuAnimation.play();
         canISeeMenu = true;
     }else{
-        // can see menu.. play X back into burger
-        burgerTL.reverse();
+        navTL.reverse();
         menuAnimation.reverse();
         canISeeMenu = false;
     }
 }
 
 burgerButton.addEventListener("click", openCloseMenu);
+
 let navButtons = document.querySelectorAll(".nav-btns");
+
+// for(let i = 0; i < navButtons.length; i++){
+//     navButtons[i].addEventListener("click", openCloseMenu);
+// }
 
 for (const button of navButtons){
     button.addEventListener("click", checkScrolling);
@@ -30,12 +33,28 @@ for (const button of navButtons){
 }
 
 function checkScrolling(e) {
-    // check to see which button was clicked
     const indexValue = [].indexOf.call(navButtons, e.target)
     if (indexValue != -1) {
         scrollPage(indexValue);
     }
 }
+
+
+
+// burgerButton.addEventListener("click",() =>{
+
+//         if(canISeeMenu === false){
+//             navTL.play();
+//             menuAnimation.play();
+//             canISeeMenu = true;
+//         }else{
+//             navTL.reverse();
+//             menuAnimation.reverse();
+//             canISeeMenu = false;
+//         }
+
+// });
+
 
 window.addEventListener('load', function(){
 

@@ -401,11 +401,16 @@ textarea {
 /* =============
     Navigation
 ============= */
-#nav-container ul {
+#nav-container {
   height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
 }
 @media (min-width: 1024px) {
   #nav-container ul {
+    height: 100%;
     display: flex;
     justify-content: flex-end;
   }
@@ -422,23 +427,24 @@ textarea {
     margin-bottom: 0px;
   }
 }
-#nav-container ul li a:link,
-#nav-container ul li a:visited {
+#nav-container ul li button {
+  background-color: transparent;
   color: #fff;
   font-family: "Comfortaa", cursive;
-  padding: 0 20px;
+  font-size: 1.25rem;
   text-decoration: none;
   transition: 0.25s;
+  cursor: pointer;
+  color: #fff;
+  border: none;
 }
 @media (min-width: 1024px) {
-  #nav-container ul li a:link,
-#nav-container ul li a:visited {
+  #nav-container ul li button {
     color: #000;
+    font-size: 1.25rem;
   }
 }
-#nav-container ul li a:link:hover, #nav-container ul li a:link:active,
-#nav-container ul li a:visited:hover,
-#nav-container ul li a:visited:active {
+#nav-container ul li button:hover {
   color: #F8C832;
 }
 #nav-container ul li:last-child {
@@ -495,8 +501,8 @@ header > div #nav-container {
   background-color: #222222;
   grid-area: nav;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  width: 50vw;
+  height: 30vh;
   z-index: 500;
 }
 @media (min-width: 1024px) {

@@ -1,8 +1,10 @@
 import { gsap } from "gsap";
 
+gsap.set("#arrow",{transformOrigin:"center"});
+
 const arrowTL = new gsap.timeline();
-arrowTL.to("#arrow",{duration:0.25, rotate: 360});
+arrowTL.from("#arrow",{duration:0.5, rotate: 180});
 
-export const burgerTL = new gsap.timeline({paused:true});
+export const navTL = new gsap.timeline({paused:true});
 
-burgerTL.add(arrowTL,"burger")
+navTL.add(arrowTL,"burger")
